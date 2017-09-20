@@ -93,4 +93,20 @@ end
     return falsy
 end
 
+def full?
+    @board.all? do |pos|
+        pos != " "
+    end
+end
+
+def draw?
+    won = won?
+    full = full?
+    if won == false && full
+        return true
+    elsif won == false && full == false
+        return false
+    end
+end
+
 end
