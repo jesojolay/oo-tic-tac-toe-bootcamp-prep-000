@@ -125,9 +125,9 @@ def winner
         wins << won?[2]
         win_X = ""
         win_O = ""
-        if board[wins[0]] == "X"
+        if @board[wins[0]] == "X"
             win_X = "X"
-        elsif board[wins[0]] = "O"
+        elsif @board[wins[0]] = "O"
             win_O = "O"
         end
         if win_X != ""
