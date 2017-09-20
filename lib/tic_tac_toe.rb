@@ -109,6 +109,13 @@ def draw?
     end
 end
 
+def over?
+    if won? || draw?
+        return true
+    elsif full? == false
+        return false
+    end
+end
 
 
 end
