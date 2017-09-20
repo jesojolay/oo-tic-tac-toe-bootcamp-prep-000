@@ -71,4 +71,26 @@ def turn
   end
 end
 
+def won?(board)
+    falsy = false
+    WIN_COMBINATIONS.each do |win|
+        posw_1 = win[0];
+        posw_2 = win[1];
+        posw_3 = win[2];
+
+        posb_1 = board[posw_1];
+        posb_2 = board[posw_2];
+        posb_3 = board[posw_3];
+
+        if posb_1 == "X" && posb_2 == "X" && posb_3 == "X" || posb_1 == "O" && posb_2 == "O" && posb_3 == "O"
+            wins = [posw_1,posw_2,posw_3]
+            falsy = true
+            return wins
+        else
+            falsy = false
+    end
+end
+    return falsy
+end
+
 end
